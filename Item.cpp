@@ -10,7 +10,7 @@ Item::~Item()
 
 void Item::afficher()
 {
-    std::cout << "Id : " << id << " Nom : ";
+    std::cout << "Id : " << id << " Nom : " ;
 
     #ifdef _WIN32
     switch(qualite)
