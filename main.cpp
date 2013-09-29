@@ -2,6 +2,7 @@
 
 #include "Item.h"
 #include "Http.h"
+#include "Sql.h"
 
 using namespace std;
 
@@ -9,6 +10,8 @@ int main()
 {
     Item item;
     Http http;
+
+    Sql sql("item.db");
 
     int i = 0;
 

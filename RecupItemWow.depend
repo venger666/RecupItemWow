@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1380464511 source:c:\users\venger\desktop\programmation\recupitemwow\main.cpp
+1380467242 source:c:\users\venger\desktop\programmation\recupitemwow\main.cpp
 	<iostream>
 	"Item.h"
 	"Http.h"
+	"Sql.h"
 
 1380464725 source:c:\users\venger\desktop\programmation\recupitemwow\item.cpp
 	"Item.h"
@@ -11,7 +12,7 @@
 	<iostream>
 	<windows.h>
 
-1380464863 source:c:\users\venger\desktop\programmation\recupitemwow\http.cpp
+1380466563 source:c:\users\venger\desktop\programmation\recupitemwow\http.cpp
 	"Http.h"
 	"Item.h"
 
@@ -185,4 +186,16 @@
 	<SFML/Network/Export.hpp>
 	<SFML/Network/Socket.hpp>
 	<vector>
+
+1380467107 source:c:\users\venger\desktop\programmation\recupitemwow\sql.cpp
+	"Sql.h"
+
+1380467003 c:\users\venger\desktop\programmation\recupitemwow\sql.h
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	"SQL/sqlite3.h"
+
+1378247182 c:\users\venger\desktop\programmation\recupitemwow\sql\sqlite3.h
+	<stdarg.h>
 
