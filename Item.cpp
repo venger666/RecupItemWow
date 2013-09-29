@@ -108,6 +108,7 @@ void Item::setQualite(const char &_qualite)
     qualite = _qualite;
 }
 
+
 //Getter
 const string& Item::getId() const
 {

@@ -2,6 +2,7 @@
 #define HTTP_H
 
 #include <iostream>
+#include <sstream>
 
 #include <SFML/Network.hpp>
 #ifdef _WIN32
@@ -17,12 +18,15 @@ class Http
     private:
         sf::Http http;
 
-        void parse(const std::string &html, Item *item);
+        bool recupPage(string &html, int id);
+        void parse(const string &html, Item *item);
         void accent(string &texte);
 
     public:
-        Http(const string &_host);
+        Http();
         ~Http();
+
+        bool process(Item *item, int id);
 };
 
 #endif // HTTP_H

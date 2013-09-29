@@ -2,13 +2,60 @@
 
 #include "Item.h"
 
-Http::Http(const string &_host)
+Http::Http()
 {
-    http.setHost(_host);
+    http.setHost("http://nostalgeek-serveur.com");
 }
 
 Http::~Http()
 {
+}
+
+bool Http::process(Item *item, int id)
+{
+    string page;
+
+    if(recupPage(page, id))
+    {
+        parse(page, item);
+
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool Http::recupPage(string &html, int id)
+{
+    // créer un flux de sortie int en string
+    std::ostringstream nombre;
+    nombre << id;
+
+    sf::Http::Request request("db/?item="+nombre.str());
+    // Send the request
+    sf::Http::Response response = http.sendRequest(request);
+    sf::Http::Response::Status status = response.getStatus();
+
+    if (status == sf::Http::Response::Ok)
+    {
+        if(response.getBody().size() != 5212) //Taille page id item invalide
+        {
+            html = response.getBody();
+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    else
+    {
+        std::cout << "Error " << status << std::endl;
+        return false;
+    }
 }
 
 void Http::parse(const string &html, Item *item)
@@ -37,7 +84,7 @@ void Http::parse(const string &html, Item *item)
         tampon.pop_back(); //on enleve le ' a la fin //popback c++11
 
         accent(tampon); //On vire la merde codé sur 2 octets
-        item->setId(tampon);
+        item->setNom(tampon);
         tampon.clear();
 
         position = "class=\"q";

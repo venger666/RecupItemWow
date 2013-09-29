@@ -1,21 +1,23 @@
 # depslib dependency file v1.0
-1380217425 source:c:\users\venger\desktop\programmation\recupitemwow\main.cpp
+1380464511 source:c:\users\venger\desktop\programmation\recupitemwow\main.cpp
 	<iostream>
 	"Item.h"
+	"Http.h"
 
-1380222268 source:c:\users\venger\desktop\programmation\recupitemwow\item.cpp
+1380464725 source:c:\users\venger\desktop\programmation\recupitemwow\item.cpp
 	"Item.h"
 
-1380222914 c:\users\venger\desktop\programmation\recupitemwow\item.h
+1380464725 c:\users\venger\desktop\programmation\recupitemwow\item.h
 	<iostream>
 	<windows.h>
 
-1380223000 source:c:\users\venger\desktop\programmation\recupitemwow\http.cpp
+1380464863 source:c:\users\venger\desktop\programmation\recupitemwow\http.cpp
 	"Http.h"
 	"Item.h"
 
-1380222542 c:\users\venger\desktop\programmation\recupitemwow\http.h
+1380463898 c:\users\venger\desktop\programmation\recupitemwow\http.h
 	<iostream>
+	<sstream>
 	<SFML/Network.hpp>
 	<windows.h>
 
